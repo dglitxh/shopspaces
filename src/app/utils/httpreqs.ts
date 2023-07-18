@@ -1,6 +1,5 @@
 
-const httpReq = async (type: string, url: URL, data: string) => {
-    data = data || ""
+export const httpReq = async (type: string, url: URL, data: string) => {
     type = type.toUpperCase()
     let config: RequestInit = {
         method: type,
@@ -10,13 +9,19 @@ const httpReq = async (type: string, url: URL, data: string) => {
         },
     }
     let res
-    if( type == "GET" || "DELETE") {
-        const req = await fetch(url, config)
-        res = req.json()
-    }else if (type == "POST" || "PUT") {
-        config.body = JSON.stringify(data)
-        const req = await fetch(url, config)
-        res = req.json()
+    try {
+        if( type == "GET" || "DELETE") {
+            const req = await fetch(url, config)
+            res = req.json()
+        }else if (type == "POST" || "PUT") {
+            config.body = JSON.stringify(data)
+            const req = await fetch(url, config)
+            res = req.json()
+        }
+        return res
+    }catch (e) {
+        console.log(e)
+        return e
     }
-    return res
 }
+
