@@ -10,11 +10,11 @@ export const httpReq = async (type: string, url: URL, data: string) => {
     }
     let res
     try {
-        if( type == "GET" || "DELETE") {
+        if(type == "GET" || "DELETE") {
             const req = await fetch(url, config)
             res = req.json()
         }else if (type == "POST" || "PUT") {
-            config.body = JSON.stringify(data)
+            config["body"] = JSON.stringify(data)
             const req = await fetch(url, config)
             res = req.json()
         }
