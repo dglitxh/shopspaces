@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
+import { Menu } from "@mui/icons-material";
 
 export default function MainNav() {
     return (
@@ -7,7 +8,7 @@ export default function MainNav() {
             <AppBar position="static">
                 <Toolbar variant="regular">
                     <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-                    <MenuIcon />
+                    <Menu />
                     </IconButton>
                     <Typography variant="h6" color="inherit" component="div">
                     Photos
