@@ -1,5 +1,6 @@
 
 export const httpReq = async (type: string, url: URL, data: string) => {
+    // an empty string is used for requests without data
     type = type.toUpperCase()
     let config: RequestInit = {
         method: type,
