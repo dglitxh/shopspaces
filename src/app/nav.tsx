@@ -1,20 +1,47 @@
+"use client";
 import React from "react";
-import { AppBar, IconButton, Toolbar, Typography, Drawer } from "@mui/material";
+import {
+  AppBar,
+  IconButton,
+  Toolbar,
+  Typography,
+  SwipeableDrawer,
+  Button,
+} from "@mui/material";
 import { Menu, Home } from "@mui/icons-material";
 
-function AppDrawer () {
+function AppDrawer(props: any) {
   return (
-    <div>
-    </div>
-  )
+    <React.Fragment key={1}>
+      <SwipeableDrawer
+        anchor={"left"}
+        open={props.isOpen}
+        onClose={() => {
+          props.toggleDrawer(!props.isOpen);
+          console.log(props.isOpen);
+        }}
+        onOpen={() => {
+          props.toggleDrawer(!props.isOpen);
+          console.log(props.isOpen);
+        }}
+      >
+        <h3>Daboii</h3>
+      </SwipeableDrawer>
+    </React.Fragment>
+  );
 }
 
 export default function MainNav() {
+  let [isOpen, setIsOpen] = React.useState(false);
+  const toggleDrawer = (action: boolean) => {
+    setIsOpen(action);
+  };
   return (
     <div>
       <AppBar position="static">
         <Toolbar variant="regular">
           <IconButton
+            onClick={() => toggleDrawer(!isOpen)}
             edge="start"
             color="inherit"
             aria-label="menu"
@@ -36,6 +63,7 @@ export default function MainNav() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      <AppDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
     </div>
   );
 }
