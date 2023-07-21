@@ -11,6 +11,7 @@ import {
 import { Menu, Home, Phone, Shop } from "@mui/icons-material";
 
 function AppDrawer(props: any) {
+  const { isOpen, toggleDrawer } = props;
   return (
     <React.Fragment key={1}>
       <SwipeableDrawer
@@ -18,12 +19,12 @@ function AppDrawer(props: any) {
         anchor={"left"}
         open={props.isOpen}
         onClose={() => {
-          props.toggleDrawer(!props.isOpen);
-          console.log(props.isOpen);
+          props.toggleDrawer(!isOpen);
+          console.log(isOpen);
         }}
         onOpen={() => {
-          props.toggleDrawer(!props.isOpen);
-          console.log(props.isOpen);
+          toggleDrawer(!isOpen);
+          console.log(isOpen);
         }}
       >
         <div>
@@ -44,7 +45,6 @@ export default function MainNav() {
     setIsOpen(action);
   };
   return (
-    
     <div>
       <AppBar position="static">
         <Toolbar variant="regular">
@@ -63,7 +63,7 @@ export default function MainNav() {
             component="div"
             sx={{ flexGrow: 1 }}
           >
-            Photos
+            ShopSpaces.
           </Typography>
           <IconButton
             edge="end"
