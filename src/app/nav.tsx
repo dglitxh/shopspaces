@@ -52,11 +52,16 @@ export default function MainNav() {
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, display: { md: "none", lg: "none" } }}
           >
             <Menu />
           </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
+          <Typography
+            variant="h6"
+            color="inherit"
+            component="div"
+            sx={{ flexGrow: 1 }}
+          >
             Photos
           </Typography>
           <IconButton
@@ -68,6 +73,7 @@ export default function MainNav() {
           >
             <Home />
           </IconButton>
+          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
       <AppDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
