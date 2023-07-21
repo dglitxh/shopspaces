@@ -8,7 +8,16 @@ import {
   SwipeableDrawer,
   Button,
 } from "@mui/material";
-import { Menu, Home, Phone, Shop } from "@mui/icons-material";
+import { ColorModeContext } from "@/utils/theme";
+import { useTheme } from "@mui/material/styles";
+import {
+  Menu,
+  Home,
+  Phone,
+  Shop,
+  Brightness4,
+  Brightness7,
+} from "@mui/icons-material";
 
 function AppDrawer(props: any) {
   const { isOpen, toggleDrawer } = props;
@@ -40,6 +49,8 @@ function AppDrawer(props: any) {
 }
 
 export default function MainNav() {
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
   let [isOpen, setIsOpen] = React.useState(false);
   const toggleDrawer = (action: boolean) => {
     setIsOpen(action);
@@ -75,6 +86,13 @@ export default function MainNav() {
             <Home />
           </IconButton>
           <Button color="inherit">Login</Button>
+          <IconButton
+            sx={{ ml: 1 }}
+            onClick={colorMode.toggleColorMode}
+            color="inherit"
+          >
+            {theme.palette.mode === "dark" ? <Brightness7 /> : <Brightness4 />}
+          </IconButton>
         </Toolbar>
       </AppBar>
       <AppDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
