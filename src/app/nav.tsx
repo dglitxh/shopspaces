@@ -8,12 +8,13 @@ import {
   SwipeableDrawer,
   Button,
 } from "@mui/material";
-import { Menu, Home } from "@mui/icons-material";
+import { Menu, Home, Phone, Shop } from "@mui/icons-material";
 
 function AppDrawer(props: any) {
   return (
     <React.Fragment key={1}>
       <SwipeableDrawer
+        variant="temporary"
         anchor={"left"}
         open={props.isOpen}
         onClose={() => {
@@ -25,7 +26,13 @@ function AppDrawer(props: any) {
           console.log(props.isOpen);
         }}
       >
-        <h3>Daboii</h3>
+        <div>
+          {["Home", "About", "Contacts", "Contents"].map((el) => (
+            <h3 key={el + String(Math.random())}>
+              <Shop /> {el}
+            </h3>
+          ))}
+        </div>
       </SwipeableDrawer>
     </React.Fragment>
   );
