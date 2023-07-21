@@ -44,6 +44,7 @@ export default function MainNav() {
     setIsOpen(action);
   };
   return (
+    
     <div>
       <AppBar position="static">
         <Toolbar variant="regular">
