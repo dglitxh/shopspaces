@@ -3,7 +3,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 
-const raleway = Raleway({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"], weight: "300" });
 
 export const metadata: Metadata = {
   title: "ShopSpaces",

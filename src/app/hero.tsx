@@ -11,6 +11,7 @@ export default function Hero() {
         background: "rgba(53, 224, 87, 0.043)",
         borderBottomLeftRadius: 370,
         borderBottomRightRadius: 370,
+        fontFamily: 'Raleway'
       }}
     >
       <Box
@@ -35,7 +36,6 @@ export default function Hero() {
           component={"p"}
           fontSize={20}
           color={"grey"}
-          justifySelf={"center"}
         >
           Set up your online shop in a matter of minutes and have the best
           protection, fairness and insight into your merchandise. Around the
