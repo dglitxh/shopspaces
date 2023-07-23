@@ -14,9 +14,10 @@ export default function Home() {
         <CssBaseline />
         <div>
           <MainNav />
-          <Hero />
-          <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <div className="z-10 w-full max-w-5xl items-center justify-between text-sm lg:flex"></div>
+          <main className="flex min-h-screen flex-col items-center justify-between ">
+            <div className="z-10 w-full  items-center justify-between text-2xl lg:flex">
+              <Hero />
+            </div>
           </main>
         </div>
       </ThemeProvider>
