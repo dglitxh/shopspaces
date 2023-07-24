@@ -11,9 +11,9 @@ export default function Hero() {
         sx={{
           background: "rgba(53, 224, 87, 0.043)",
           borderBottomLeftRadius: 370,
-          borderBottomRightRadius: 370,
+          borderTopRightRadius: 370,
           fontFamily: "Raleway",
-          height: "90vh",
+          height: "92vh",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
@@ -23,7 +23,7 @@ export default function Hero() {
         <Box
           p={"10%"}
           sx={{
-            fontSize: { lg: "200%", md: "200%" },
+            fontSize: { lg: "200%", md: "150%" },
           }}
         >
           <Typography fontSize={"250%"} variant={"h2"} gutterBottom>
@@ -34,12 +34,12 @@ export default function Hero() {
               component={"span"}
             >
               {" "}
-              Shopspace.
+              Shopspaces.
             </Typography>{" "}
-            builds virtual stores in minutes
+            builds your virtual stores in a flash.
           </Typography>
 
-          <Typography component={"p"} color={"grey"}>
+          <Typography component={"p"} color={"grey"} fontSize={"22px"} maxWidth={"sm"}>
             Set up your online shop in a matter of minutes and have the best
             protection, fairness and insight into your merchandise. Around the
             clock support is assured.
