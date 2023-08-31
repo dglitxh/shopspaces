@@ -1,9 +1,17 @@
 import React from "react"
+import { Box, Container, Grid } from "@mui/"
 
 export function about () {
     return (
-        <div>
+        <Container>
+            <Grid container>
+                <Grid item>
 
-        </div>
+                </Grid>
+                <Grid item>
+                    
+                </Grid>
+            </Grid>
+        </Container>
     )
 }
