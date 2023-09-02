@@ -13,8 +13,8 @@ export default aboutData = [
           let your items shinen and captivate your customers' attention.`,
     svg: "",
   },
-//   {
-//     id: 3,
-//     title: 
-//   }
+  //   {
+  //     id: 3,
+  //     title:
+  //   }
 ];
