@@ -1,4 +1,4 @@
-export default aboutData = [
+export const aboutData = [
   {
     id: 1,
     title: `Your shop, Your rules.`,
