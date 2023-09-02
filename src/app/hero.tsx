@@ -43,9 +43,9 @@ export default function Hero() {
             fontSize={"22px"}
             maxWidth={"sm"}
           >
-            Set up your online shop in a matter of minutes and have the best
-            protection, fairness and insight into your merchandise. Around the
-            clock support is assured.
+            Welcome to shopspaces the ultimate destination for unleashing your 
+            enter spirit! 🛍️ Create your personal online shop effortlessly and share your passion with
+            the world.
           </Typography>
         </Box>
       </Box>
