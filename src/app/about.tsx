@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid } from "@mui/";
+import { Box, Container, Grid } from "@mui/material";
 
 export function About() {
   return (
