@@ -10,9 +10,9 @@ export function About() {
           <Box key={el.id}>
             <Grid item xs={12}>
               <Typography variant={"h2"} color="green">
-                el.title
+                {el.title}
               </Typography>
-              <Typography component={"p"}>el.text</Typography>
+              <Typography component={"p"}>{el.text}</Typography>
             </Grid>
             <Grid item xs={12}></Grid>
           </Box>
