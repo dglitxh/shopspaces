@@ -7,7 +7,7 @@ export function About() {
     <Container>
       <Grid container>
         {data.map((el) => (
-          <Box id={el.id}>
+          <Box key={el.id}>
             <Grid item xs={12}>
               <Typography variant={"h2"} color="green">
                 aboutData.title
