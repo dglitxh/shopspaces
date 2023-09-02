@@ -6,13 +6,13 @@ export function About() {
   return (
     <Container>
       <Grid container>
-        {data.map((el) => (
+        {aboutData.map((el) => (
           <Box key={el.id}>
             <Grid item xs={12}>
               <Typography variant={"h2"} color="green">
-                aboutData.title
+                el.title
               </Typography>
-              <Typography variant="p">aboutData.text</Typography>
+              <Typography variant="p">el.text</Typography>
             </Grid>
             <Grid item xs={12}></Grid>
           </Box>
