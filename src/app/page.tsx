@@ -1,10 +1,11 @@
 "use client";
 import { CssBaseline } from "@mui/material";
 import React from "react";
-import MainNav from "./landing/nav";
 import { ColorModeContext, useThemeHook } from "@/utils/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import Hero from "./landing/hero";
+import About from "./landing/about";
+import MainNav from "./landing/nav";
 
 export default function Home() {
   const theme = useThemeHook();
