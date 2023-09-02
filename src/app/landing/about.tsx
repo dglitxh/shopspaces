@@ -12,7 +12,7 @@ export function About() {
               <Typography variant={"h2"} color="green">
                 el.title
               </Typography>
-              <Typography variant={"p"}>el.text</Typography>
+              <Typography component={"p"}>el.text</Typography>
             </Grid>
             <Grid item xs={12}></Grid>
           </Box>
