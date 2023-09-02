@@ -43,9 +43,9 @@ export default function Hero() {
             fontSize={"22px"}
             maxWidth={"sm"}
           >
-            Welcome to shopspaces, the ultimate destination for unleashing your 
-            entrepreneural spirit! 🛍️ Create your personal online shop effortlessly and share your passion with
-            the world.
+            Welcome to shopspaces, the ultimate destination for unleashing your
+            entrepreneural spirit! 🛍️ Create your personal online shop
+            effortlessly and share your passion with the world.
           </Typography>
         </Box>
       </Box>
