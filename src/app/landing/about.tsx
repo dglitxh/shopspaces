@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image'
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { aboutData } from "@/utils/data";
 
@@ -15,7 +16,12 @@ export default function About() {
               <Typography component={"p"}>{el.text}</Typography>
             </Grid>
             <Grid item xs={12}>
-              <Image src={""}/>
+            <Image
+              src={el.img}
+              width={500}
+              height={500}
+              alt="grid pic"
+            />
             </Grid>
           </Box>
         ))}
