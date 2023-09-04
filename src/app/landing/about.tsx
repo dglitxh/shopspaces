@@ -1,6 +1,6 @@
 import React from "react";
 import Image from 'next/image'
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography, Item } from "@mui/material";
 import { aboutData } from "@/utils/data";
 
 export default function About() {
@@ -10,9 +10,12 @@ export default function About() {
         {aboutData.map((el) => (
           <Box key={el.id}>
             <Grid item xs={12}>
-              <Typography variant={"h2"} color="green">
+              <Item>
+                <Typography variant={"h2"} color="green">
                 {el.title}
               </Typography>
+              </Item>
+              
               <Typography component={"p"}>{el.text}</Typography>
             </Grid>
             <Grid item xs={12}>
