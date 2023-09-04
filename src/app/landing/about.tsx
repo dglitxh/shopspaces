@@ -14,7 +14,9 @@ export default function About() {
               </Typography>
               <Typography component={"p"}>{el.text}</Typography>
             </Grid>
-            <Grid item xs={12}></Grid>
+            <Grid item xs={12}>
+              <Image src={""}/>
+            </Grid>
           </Box>
         ))}
       </Grid>
