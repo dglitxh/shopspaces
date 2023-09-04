@@ -4,7 +4,7 @@ import { aboutData } from "@/utils/data";
 
 export default function About() {
   return (
-    <Container>
+    <Container maxWidth="lg">
       <Grid container>
         {aboutData.map((el) => (
           <Box key={el.id}>
