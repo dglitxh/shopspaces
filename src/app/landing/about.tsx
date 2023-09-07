@@ -10,9 +10,7 @@ export default function About() {
         {aboutData.map((el) => (
           <Grid container spacing={2} key={el.id} p={"5%"}>
             <Grid item lg={6} xl={6} md={6}>
-              <Typography variant={"h2"} color={"#00ED64"}>
-                {el.title}
-              </Typography>
+              <Typography variant={"h2"}>{el.title}</Typography>
               <Typography component={"p"}>{el.text}</Typography>
             </Grid>
             <Grid item xs={12} lg={6} xl={6} md={6}>
