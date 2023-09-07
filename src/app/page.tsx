@@ -16,9 +16,8 @@ export default function Home() {
         <div>
           <MainNav />
           <main className="flex min-h-screen flex-col items-center justify-between ">
-            <div className="z-10 w-full  items-center justify-between text-xl lg:flex">
-              <Hero />
-            </div>
+            <Hero />
+
             <About />
           </main>
         </div>
