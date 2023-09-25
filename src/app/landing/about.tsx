@@ -9,7 +9,12 @@ export default function About() {
       <Box p={"10%"}>
         {aboutData.map((el) => (
           <Grid container spacing={2} key={el.id} p={"5%"}>
-            <Grid item lg={6} xl={6} md={6}>
+            <Grid item lg={6} xl={6} md={6} sx={{
+               display: "flex",
+               justifyContent: "center",
+               flexDirection: "column",
+               alignItems: "center",
+            }}>
               <Typography variant={"h2"}>{el.title}</Typography>
               <Typography component={"p"}>{el.text}</Typography>
             </Grid>
