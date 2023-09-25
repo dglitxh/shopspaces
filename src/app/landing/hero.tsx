@@ -47,6 +47,7 @@ export default function Hero() {
             entrepreneural spirit! 🛍️ Create your personal online shop
             effortlessly and share your passion with the world.
           </Typography>
+          <Button >Get started</Button>
         </Box>
       </Box>
     </Container>
