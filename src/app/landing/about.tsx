@@ -12,7 +12,6 @@ export default function About() {
     const partA = arr.slice(0, r).join(" ") + " ";
     const partB = " " + arr.slice(r + 1).join(" ");
     let colored = arr[r];
-    console.log(partA, colored + "col", partB);
     return (
       <Typography fontSize={"110%"} variant={"h3"}>
         {partA}
