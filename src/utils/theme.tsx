@@ -21,10 +21,13 @@ export const useThemeHook = () => {
     () =>
       createTheme({
         palette: {
+          primary: {
+            main: "#00ED64",
+          },
           mode,
         },
         typography: {
-          fontFamily: "Raleway, Arial",
+          fontFamily: "Raleway",
         },
       }),
     [mode]
