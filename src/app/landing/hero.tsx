@@ -50,7 +50,9 @@ export default function Hero() {
           </Typography>
           <Stack spacing={2} direction="row">
             <Button variant="outlined">Get started</Button>
-            <Button variant="contained">Learn more</Button>
+            <Button variant="contained" color="primary">
+              Learn more
+            </Button>
           </Stack>
         </Box>
       </Box>
