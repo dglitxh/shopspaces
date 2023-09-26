@@ -7,6 +7,7 @@ import {
   Typography,
   SwipeableDrawer,
   Button,
+  Box,
 } from "@mui/material";
 import { ColorModeContext } from "@/utils/theme";
 import { useTheme } from "@mui/material/styles";
@@ -21,6 +22,7 @@ import {
 
 function AppDrawer(props: any) {
   const { isOpen, toggleDrawer } = props;
+
   return (
     <React.Fragment key={1}>
       <SwipeableDrawer
@@ -52,6 +54,7 @@ export default function MainNav() {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
   let [isOpen, setIsOpen] = React.useState(false);
+  const pages = ["Home", "About", "Gallery", "Contact"];
   const toggleDrawer = (action: boolean) => {
     setIsOpen(action);
   };
@@ -76,6 +79,17 @@ export default function MainNav() {
           >
             ShopSpaces.
           </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={() => {}}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
           <IconButton
             edge="end"
             color="inherit"
