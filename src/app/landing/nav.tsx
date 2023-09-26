@@ -59,8 +59,8 @@ export default function MainNav() {
     setIsOpen(action);
   };
   return (
-    <div>
-      <AppBar position="static">
+    <div id="nav">
+      <AppBar position="sticky" color="transparent" enableColorOnDark>
         <Toolbar variant="regular">
           <IconButton
             onClick={() => toggleDrawer(!isOpen)}
@@ -84,9 +84,10 @@ export default function MainNav() {
               <Button
                 key={page}
                 onClick={() => {}}
-                sx={{ my: 2, color: "white", display: "block" }}
+                color="inherit"
+                sx={{ my: 2, display: "block" }}
               >
-                {page}
+                <Typography>{page}</Typography>
               </Button>
             ))}
           </Box>
