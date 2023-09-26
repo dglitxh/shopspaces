@@ -1,5 +1,5 @@
 "use client";
-import { Box, Container, Typography, Button } from "@mui/material";
+import { Box, Container, Typography, Button, Stack } from "@mui/material";
 import React from "react";
 
 export default function Hero() {
@@ -24,7 +24,7 @@ export default function Hero() {
             fontSize: { lg: "200%", md: "150%" },
           }}
         >
-          <Typography fontSize={"250%"} variant={"h2"} gutterBottom>
+          <Typography fontSize={"250%"} variant={"h2"}>
             <Typography
               fontSize={"110%"}
               color={"#00ED64"}
@@ -42,12 +42,16 @@ export default function Hero() {
             color={"grey"}
             fontSize={"22px"}
             maxWidth={"sm"}
+            gutterBottom
           >
             Welcome to shopspaces, the ultimate destination for unleashing your
             entrepreneural spirit! 🛍️ Create your personal online shop
             effortlessly and share your passion with the world.
           </Typography>
-          <Button >Get started</Button>
+          <Stack spacing={2} direction="row">
+            <Button variant="outlined">Get started</Button>
+            <Button variant="contained">Learn more</Button>
+          </Stack>
         </Box>
       </Box>
     </Container>
