@@ -1,13 +1,15 @@
 import ShopSvg from "@/assets/shop";
 import GrowthSvg from "@/assets/growth";
 import IdeaSvg from "@/assets/idea";
+import UpSvg from "@/assets/up";
 
 export const aboutData = [
   {
     id: 1,
     title: `Your shop Your rules`,
     text: `Craft your unique storefront that reflects your brand identity.
-                   With our user-friendly tools, you're just a few clicks away from designing a shop that stands out`,
+                   With our user-friendly tools, you're just a few clicks away from
+                    designing a shop that stands out.`,
     img: ShopSvg(),
   },
   {
@@ -24,5 +26,12 @@ export const aboutData = [
     Our platform's robust features ensure a seamless shopping experience,
      no matter where your customers are.`,
     img: GrowthSvg(),
+  },
+  {
+    id: 4,
+    title: "Grow your business",
+    text: `Our platform is designed to help your businesses thrive.
+     With integrated marketing tools, analytics, support, you're set up for greater things.`,
+    img: UpSvg(),
   },
 ];
