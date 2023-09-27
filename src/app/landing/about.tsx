@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import ShopSvg from "@/assets/shop";
 import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { aboutData } from "@/utils/data";
 
@@ -46,11 +47,12 @@ export default function About() {
                 {el.text}
                 <br></br>
                 <br></br>
-                <Button variant="outlined">Learn more</Button>
+                <Button variant="outlined" color="info">Learn more</Button>
               </Typography>
             </Grid>
             <Grid item xs={12} lg={6} xl={6} md={6}>
-              <Image src={el.img} width={300} height={300} alt="grid pic" />
+              {/* <Image src={el.img} width={300} height={300} alt="grid pic" /> */}
+              {el.img}
             </Grid>
           </Grid>
         ))}
