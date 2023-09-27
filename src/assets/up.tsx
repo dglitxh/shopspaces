@@ -8,7 +8,7 @@ export default function UpSvg() {
       viewBox="0 0 467 536"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ width: "100%", height: "100%" }}
+      style={{ width: "90%", height: "90%" }}
     >
       <g clip-path="url(#clip0_35_833)">
         <path
