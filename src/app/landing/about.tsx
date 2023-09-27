@@ -26,36 +26,69 @@ export default function About() {
   return (
     <Container maxWidth="lg" sx={{ flexGrow: 1 }}>
       <Box p={"10%"}>
-        {aboutData.map((el) => (
-          <Grid container spacing={2} key={el.id} p={"5%"}>
-            <Grid
-              item
-              lg={6}
-              xl={6}
-              md={6}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-              }}
-            >
-              <Typography variant={"h3"}>
-                <RandCol title={el.title} />
-              </Typography>
-              <Typography component={"p"} color="gray">
-                {el.text}
-                <br></br>
-                <br></br>
-                <Button variant="outlined" color="info">Learn more</Button>
-              </Typography>
+        {aboutData.map((el) =>
+          el.id % 2 != 0 ? (
+            <Grid container spacing={8} key={el.id}>
+              <Grid
+                item
+                lg={6}
+                xl={6}
+                md={6}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography variant={"h3"}>
+                  <RandCol title={el.title} />
+                </Typography>
+                <Typography component={"p"} color="gray">
+                  {el.text}
+                  <br></br>
+                  <br></br>
+                  <Button variant="outlined" color="info">
+                    Learn more
+                  </Button>
+                </Typography>
+              </Grid>
+              <Grid item xs={12} lg={6} xl={6} md={6}>
+                {el.img}
+              </Grid>
             </Grid>
-            <Grid item xs={12} lg={6} xl={6} md={6}>
-              {/* <Image src={el.img} width={300} height={300} alt="grid pic" /> */}
-              {el.img}
+          ) : (
+            <Grid container spacing={8} my="8%" key={el.id}>
+              <Grid item xs={12} lg={6} xl={6} md={6}>
+                {el.img}
+              </Grid>
+              <Grid
+                item
+                lg={6}
+                xl={6}
+                md={6}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography variant={"h3"}>
+                  <RandCol title={el.title} />
+                </Typography>
+                <Typography component={"p"} color="gray">
+                  {el.text}
+                  <br></br>
+                  <br></br>
+                  <Button variant="outlined" color="info">
+                    Learn more
+                  </Button>
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
-        ))}
+          )
+        )}
       </Box>
     </Container>
   );
