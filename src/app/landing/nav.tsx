@@ -8,6 +8,12 @@ import {
   SwipeableDrawer,
   Button,
   Box,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Divider,
 } from "@mui/material";
 import { ColorModeContext } from "@/utils/theme";
 import { useTheme } from "@mui/material/styles";
@@ -38,13 +44,20 @@ function AppDrawer(props: any) {
           console.log(isOpen);
         }}
       >
-        <div>
-          {["Home", "About", "Contacts", "Contents"].map((el) => (
-            <h3 key={el + String(Math.random())}>
-              <Shop /> {el}
-            </h3>
-          ))}
-        </div>
+        <Box sx={{ width: 250 }} role="presentation">
+          <List>
+            {props.menu.map((el: string) => (
+              <Box key={el + String(Math.random())}>
+                <ListItem>
+                  <ListItemButton>
+                    <ListItemText primary={el} />
+                  </ListItemButton>
+                </ListItem>
+                <Divider />
+              </Box>
+            ))}
+          </List>
+        </Box>
       </SwipeableDrawer>
     </React.Fragment>
   );
@@ -110,7 +123,7 @@ export default function MainNav() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <AppDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
+      <AppDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} menu={pages}/>
     </div>
   );
 }
