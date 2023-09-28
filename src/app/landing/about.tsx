@@ -4,10 +4,10 @@ import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { aboutData } from "@/utils/data";
 
 export default function About() {
-  const [vp, setVp] = useState(0)
+  const [vpWidth, setVpWidth] = useState(0);
   useEffect(() => {
-    setVp(window.innerWidth)
-  },[])
+    setVpWidth(window.innerWidth);
+  }, []);
   const RandCol = (props: any) => {
     let title: string = props.title;
     let arr = title.split(" ");
@@ -29,8 +29,8 @@ export default function About() {
     <Container maxWidth="lg" sx={{ flexGrow: 1 }}>
       <Box p={"10%"}>
         {aboutData.map((el) =>
-          el.id % 2 != 0 || vp < 520 ? (
-            <Grid container spacing={8} my="8%" key={el.id}>
+          el.id % 2 != 0 || vpWidth < 800 ? (
+            <Grid container spacing={8} my="3%" key={el.id}>
               <Grid item xs={12} lg={6} xl={6} md={6}>
                 {el.img}
               </Grid>
@@ -60,7 +60,7 @@ export default function About() {
               </Grid>
             </Grid>
           ) : (
-            <Grid container spacing={8} key={el.id}>
+            <Grid container spacing={8} my="2%" key={el.id}>
               <Grid
                 item
                 lg={6}
