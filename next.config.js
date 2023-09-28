@@ -7,8 +7,13 @@ const nextConfig = {
         hostname: "images.pexels.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "backend-prod.absurd.design",
+        port: "",
+      },
     ],
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;
