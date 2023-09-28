@@ -8,10 +8,10 @@ import About from "./landing/about";
 import MainNav from "./landing/nav";
 
 export default function Home() {
-  const theme = useThemeHook();
+  const { theme, colorMode } = useThemeHook();
   return (
-    <ColorModeContext.Provider value={theme.colorMode}>
-      <ThemeProvider theme={theme.theme}>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <div>
           <MainNav />
