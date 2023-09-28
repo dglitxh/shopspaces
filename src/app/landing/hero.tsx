@@ -57,19 +57,19 @@ export default function Hero() {
           </Stack>
         </Box>
       </Box>
-      <Image
+      {/* <Image
         width="520"
         height={"520"}
         alt="Illustration preview"
         style={{
           position: "absolute",
-          opacity: 0.1,
+          opacity: 0.2,
           right: "10%",
           top: "55%",
         }}
         // src="https://backend-prod.absurd.design/uploads/ckvtk1tdt000z14r034jr4nrk.jpg"
         src="https://backend-prod.absurd.design/uploads/ckvtjdc08000114r081x1axyx.jpg"
-      />
+      /> */}
     </Container>
   );
 }
