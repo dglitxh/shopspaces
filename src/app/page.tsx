@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Hero from "./landing/hero";
 import About from "./landing/about";
 import MainNav from "./landing/nav";
+import MediaCards from "./landing/cards";
 
 export default function Home() {
   const { theme, colorMode } = useThemeHook();
@@ -17,8 +18,8 @@ export default function Home() {
           <MainNav />
           <main className="flex min-h-screen flex-col items-center justify-between ">
             <Hero />
-
             <About />
+            <MediaCards />
           </main>
         </div>
       </ThemeProvider>
