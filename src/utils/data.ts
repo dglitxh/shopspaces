@@ -35,3 +35,24 @@ export const aboutData = [
     img: UpSvg(),
   },
 ];
+
+export const cardData = [
+  {
+    id: 1,
+    svg: "",
+    title: "",
+    text: "",
+  },
+  {
+    id: 2,
+    svg: "",
+    title: "",
+    text: "",
+  },
+  {
+    id: 3,
+    svg: "",
+    title: "",
+    text: "",
+  },
+];
