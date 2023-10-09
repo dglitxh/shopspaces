@@ -57,7 +57,7 @@ export default function MainNav() {
   };
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static">      
         <Toolbar variant="regular">
           <IconButton
             onClick={() => toggleDrawer(!isOpen)}
