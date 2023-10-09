@@ -1,6 +1,7 @@
 {
   "name": "shopspaces",
   "version": "0.1.0",
+  "author": "ydzly",
   "private": true,
   "scripts": {
     "dev": "next dev",

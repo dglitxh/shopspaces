@@ -1,5 +1,6 @@
 "use client";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, Button, Stack } from "@mui/material";
+import Image from "next/image";
 import React from "react";
 
 export default function Hero() {
@@ -24,9 +25,9 @@ export default function Hero() {
             fontSize: { lg: "200%", md: "150%" },
           }}
         >
-          <Typography fontSize={"250%"} variant={"h2"} gutterBottom>
+          <Typography fontSize={"250%"} variant={"h2"}>
             <Typography
-              fontSize={"110%"}
+              fontSize={"120%"}
               color={"#00ED64"}
               variant={"h2"}
               component={"span"}
@@ -42,13 +43,33 @@ export default function Hero() {
             color={"grey"}
             fontSize={"22px"}
             maxWidth={"sm"}
+            gutterBottom
           >
-            Set up your online shop in a matter of minutes and have the best
-            protection, fairness and insight into your merchandise. Around the
-            clock support is assured.
+            Welcome to shopspaces, the ultimate destination for unleashing your
+            entrepreneural spirit! 🛍️ Create your personal online shop
+            effortlessly and share your passion with the world.
           </Typography>
+          <Stack spacing={2} direction="row">
+            <Button variant="outlined">Get started</Button>
+            <Button variant="contained" color="primary">
+              Learn more
+            </Button>
+          </Stack>
         </Box>
       </Box>
+      {/* <Image
+        width="520"
+        height={"520"}
+        alt="Illustration preview"
+        style={{
+          position: "absolute",
+          opacity: 0.2,
+          right: "10%",
+          top: "55%",
+        }}
+        // src="https://backend-prod.absurd.design/uploads/ckvtk1tdt000z14r034jr4nrk.jpg"
+        src="https://backend-prod.absurd.design/uploads/ckvtjdc08000114r081x1axyx.jpg"
+      /> */}
     </Container>
   );
 }
