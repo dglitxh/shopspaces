@@ -123,7 +123,7 @@ export default function MainNav() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <AppDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} menu={pages}/>
+      <AppDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} menu={pages} />
     </div>
   );
 }
