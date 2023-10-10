@@ -39,20 +39,20 @@ export const aboutData = [
 export const cardData = [
   {
     id: 1,
-    svg: "",
-    title: "",
-    text: "",
+    svg: "https://www.svgrepo.com/show/530437/safe-and-stable.svg",
+    title: "Secure transactions",
+    text: "Rest easy knowing that our platform ensures safe and secure payment processing, Our robust security and top notch encryption keeps every transaction safe.",
   },
   {
     id: 2,
-    svg: "",
-    title: "",
-    text: "",
+    svg: "https://www.svgrepo.com/show/530443/interface-control.svg",
+    title: "Business analytics",
+    text: "Our platform is designted to help your business thrive. With integrated support, analytics and marketing tools, you're set-up for success ",
   },
   {
     id: 3,
-    svg: "",
-    title: "",
-    text: "",
+    svg: "https://www.svgrepo.com/show/530452/mobile-app.svg",
+    title: "Easy management",
+    text: "Keep tack of orders, manage inventory, and update product listing with ease. Spend less time worrying about technicalities and more time doing what you love.",
   },
 ];
