@@ -8,9 +8,9 @@ export const ColorModeContext = React.createContext({
 });
 
 export const useThemeHook = () => {
-  const dm = useMediaQuery("(prefers-color-scheme: dark)");
-  const userPref = dm ? "dark" : "light";
-  const [mode, setMode] = React.useState<"light" | "dark">(userPref||"dark");
+  const isDark = useMediaQuery("(prefers-color-scheme: dark)");
+  const userPref = isDark ? "dark" : "light";
+  const [mode, setMode] = React.useState<"light" | "dark">(userPref);
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
