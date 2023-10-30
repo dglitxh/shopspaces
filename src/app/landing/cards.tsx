@@ -15,15 +15,16 @@ import { cardData } from "@/utils/data";
 export default function MediaCards() {
   return (
     <Container
-      maxWidth="md"
+      maxWidth="lg"
       sx={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        flexWrap: "wrap",
       }}
     >
       {cardData.map((el) => (
-        <Card sx={{ maxWidth: 345, margin: 1 }} key={el.id}>
+        <Card sx={{ maxWidth: 345, margin: 1, height: 250 }} key={el.id}>
           {/* <CardMedia
             sx={{ height: 40 }}
             image="https://www.svgrepo.com/show/530443/interface-control.svg"
@@ -34,19 +35,17 @@ export default function MediaCards() {
             height="60"
             alt="svg"
             style={{ marginLeft: "5%" }}
-            src="https://www.svgrepo.com/show/530443/interface-control.svg"
+            src={el.svg}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              {el.title}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              {el.text}
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Share</Button>
             <Button size="small">Learn More</Button>
           </CardActions>
         </Card>
