@@ -3,6 +3,8 @@ import GrowthSvg from "@/assets/growth";
 import IdeaSvg from "@/assets/idea";
 import UpSvg from "@/assets/up";
 
+export const BACKEND = "localhost:8000";
+
 export const aboutData = [
   {
     id: 1,
