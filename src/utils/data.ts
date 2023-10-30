@@ -2,8 +2,15 @@ import ShopSvg from "@/assets/shop";
 import GrowthSvg from "@/assets/growth";
 import IdeaSvg from "@/assets/idea";
 import UpSvg from "@/assets/up";
+import { create } from "zustand";
 
 export const BACKEND = "localhost:8000";
+
+export const useProductStore = create((set) => ({
+  items: [],
+  addProducts: (prods: Array<Object>) =>
+    set((state: any) => ({ items: prods })),
+}));
 
 export const aboutData = [
   {
