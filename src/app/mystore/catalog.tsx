@@ -1,3 +1,4 @@
+"use client";
 import {
   Container,
   Typography,
@@ -9,21 +10,25 @@ import {
 import React, { useEffect, useState } from "react";
 import { BACKEND } from "@/utils/data";
 import { httpReq } from "@/utils/helpers";
+import { useProductStore } from "@/utils/data";
 
-export default async function Catalog() {
-  const [products, setProducts] = useState([]);
+export default function Catalog() {
+  let products: Array<any> = [];
   useEffect(() => {
     const getProds = async () => {
       const prods = await httpReq("GET", `${BACKEND}/products`, "");
-      setProducts(prods);
+      console.log(prods);
+      products = prods;
     };
     getProds();
-  });
+  }, []);
+  useProductStore((state: any) => state.addProducts(products));
+  let items = useProductStore((state: any) => state.items);
 
   return (
     <Container>
       <Typography> My Catalog</Typography>
-      {products.map((el: any) => (
+      {items.map((el: any) => (
         <Card sx={{ maxWidth: 345, margin: 1 }} key={el.id}>
           {/* <CardMedia
             sx={{ height: 40 }}
