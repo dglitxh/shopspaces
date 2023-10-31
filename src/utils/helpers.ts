@@ -18,7 +18,6 @@ export const httpReq = async (type: string, url: string, data: string) => {
       const req = await fetch(url, config);
       res = req.json();
     }
-    console.log(res);
     return res;
   } catch (e) {
     console.log(e);
