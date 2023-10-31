@@ -22,13 +22,13 @@ export default function Catalog() {
     };
     getProds();
   }, []);
-  useProductStore((state: any) => state.addProducts(products));
-  let items = useProductStore((state: any) => state.items);
+  // useProductStore((state: any) => state.addProducts(products));
+  // let items = useProductStore((state: any) => state.items);
 
   return (
     <Container>
       <Typography> My Catalog</Typography>
-      {items.map((el: any) => (
+      {products.map((el: any) => (
         <Card sx={{ maxWidth: 345, margin: 1 }} key={el.id}>
           {/* <CardMedia
             sx={{ height: 40 }}
