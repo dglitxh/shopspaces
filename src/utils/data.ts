@@ -8,8 +8,7 @@ export const BACKEND = "http://127.0.0.1:8000";
 
 export const useProductStore = create((set) => ({
   items: [],
-  addProducts: (prods: Array<Object>) =>
-    set((state: any) => ({ items: prods })),
+  addProducts: (prods: any) => set((state: any) => ({ items: prods })),
 }));
 
 export const aboutData = [
