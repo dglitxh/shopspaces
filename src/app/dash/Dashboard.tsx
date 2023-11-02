@@ -1,7 +1,6 @@
 "use client";
 import * as React from "react";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
 import MuiDrawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
@@ -25,15 +24,10 @@ import Orders from "./Orders";
 
 function Copyright(props: any) {
   return (
-    <Typography
-      variant="body2"
-      color="inherit"
-      align="center"
-      {...props}
-    >
+    <Typography variant="body2" color="inherit" align="center" {...props}>
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Shopspaces
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -91,9 +85,6 @@ const Drawer = styled(MuiDrawer, {
   },
 }));
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
-
 export default function Dashboard() {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
@@ -101,8 +92,13 @@ export default function Dashboard() {
   };
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <AppBar position="absolute" open={open}>
+    <Box sx={{ display: "flex", backgroundColor: "inherit" }}>
+      <AppBar
+        position="absolute"
+        color="transparent"
+        enableColorOnDark
+        open={open}
+      >
         <Toolbar
           sx={{
             pr: "24px", // keep right padding when drawer closed
@@ -130,7 +126,7 @@ export default function Dashboard() {
             Dashboard
           </Typography>
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+            <Badge badgeContent={4} color="error">
               <NotificationsIcon />
             </Badge>
           </IconButton>
