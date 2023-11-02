@@ -17,16 +17,19 @@ import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
 import Deposits from "./Deposits";
 import Orders from "./Orders";
+import { ColorModeContext } from "@/utils/theme";
+import { useTheme } from "@mui/material/styles";
 
 function Copyright(props: any) {
   return (
     <Typography variant="body2" color="inherit" align="center" {...props}>
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="#">
         Shopspaces
       </Link>{" "}
       {new Date().getFullYear()}
@@ -90,15 +93,11 @@ export default function Dashboard() {
   const toggleDrawer = () => {
     setOpen(!open);
   };
-
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext);
   return (
     <Box sx={{ display: "flex", backgroundColor: "inherit" }}>
-      <AppBar
-        position="absolute"
-        color="transparent"
-        enableColorOnDark
-        open={open}
-      >
+      <AppBar position="absolute" color="inherit" open={open}>
         <Toolbar
           sx={{
             pr: "24px", // keep right padding when drawer closed
@@ -125,6 +124,13 @@ export default function Dashboard() {
           >
             Dashboard
           </Typography>
+          <IconButton
+            sx={{ ml: 1 }}
+            onClick={colorMode.toggleColorMode}
+            color="inherit"
+          >
+            {theme.palette.mode === "dark" ? <Brightness7 /> : <Brightness4 />}
+          </IconButton>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="error">
               <NotificationsIcon />
