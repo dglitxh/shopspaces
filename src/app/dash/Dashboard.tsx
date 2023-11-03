@@ -24,6 +24,7 @@ import Deposits from "./Deposits";
 import Orders from "./Orders";
 import { ColorModeContext } from "@/utils/theme";
 import { useTheme } from "@mui/material/styles";
+import EarningCard from "./EarningCard";
 
 function Copyright(props: any) {
   return (
@@ -199,6 +200,11 @@ export default function Dashboard() {
             <Grid item xs={12}>
               <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
                 <Orders />
+              </Paper>
+            </Grid>
+            <Grid item xs={12}>
+              <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+                <EarningCard />
               </Paper>
             </Grid>
           </Grid>
