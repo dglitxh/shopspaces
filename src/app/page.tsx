@@ -1,5 +1,5 @@
 "use client";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, Container } from "@mui/material";
 import React from "react";
 import { ColorModeContext, useThemeHook } from "@/utils/theme";
 import { ThemeProvider } from "@mui/material/styles";
@@ -14,14 +14,14 @@ export default function Home() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div>
+        <Container>
           <MainNav />
           <main className="flex min-h-screen flex-col items-center justify-between ">
             <Hero />
             <About />
             <MediaCards />
           </main>
-        </div>
+        </Container>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
