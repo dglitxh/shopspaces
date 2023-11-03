@@ -1,6 +1,8 @@
 import React from "react";
+import { SvgProps } from "@/utils/types";
 
-export default function GrowthSvg() {
+
+export default function GrowthSvg(props: SvgProps) {
   return (
     <svg
       id="Layer_2"
@@ -13,8 +15,8 @@ export default function GrowthSvg() {
         <g>
           <path
             d="m148.773,777.819c3.66-23.96,24.35-42.32,49.34-42.32,4.49,0,8.85.6,12.99,1.71,12.71-31.75,43.74-54.19,80.03-54.19,4.32,0,8.57.33,12.72.94,2.37-51.42,44.81-92.38,96.81-92.38,17.53,0,33.97,4.65,48.15,12.79l16.86-153.54h47l12.84,146c9.89-3.4,20.5-5.25,31.54-5.25,40.96,0,75.99,25.41,90.18,61.32,7.86-3.07,16.42-4.78,25.37-4.78,36.2,0,65.94,27.58,69.38,62.87,6.63-3.26,14.09-5.09,21.98-5.09,27.57,0,49.92,22.35,49.92,49.92,0,7.89-1.83,15.36-5.1,22"
-            fill="#00ED64"
-            stroke="#00ED64"
+            fill={props.color}
+            stroke={props.color}
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="1.5"
@@ -32,16 +34,16 @@ export default function GrowthSvg() {
               <g>
                 <path
                   d="m478.309,415.119c-61.072,26.603-73.142,75.06-59.367,132.954,1.01,4.247-4.146,7.412-8.07,4.955-15.333-9.6-28.186-22.908-36.761-39.337-25.976-49.767-7.744-121.511,46.733-145.241,38.097-16.595,70.944,40.797,57.465,46.669Z"
-                  fill="#00ED64"
-                  stroke="#00ED64"
+                  fill={props.color}
+                  stroke={props.color}
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1.5"
                 ></path>
                 <path
                   d="m500.669,415.119c61.072,26.603,73.142,75.06,59.367,132.954-1.01,4.247,4.146,7.412,8.07,4.955,15.333-9.6,28.186-22.908,36.761-39.337,25.976-49.767,7.744-121.511-46.733-145.241-38.097-16.595-70.944,40.797-57.465,46.669Z"
-                  fill="#00ED64"
-                  stroke="#00ED64"
+                  fill={props.color}
+                  stroke={props.color}
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1.5"
@@ -50,7 +52,7 @@ export default function GrowthSvg() {
               <path
                 d="m580.153,244.103c0,91.443-18.732,173.22-43.698,227.631h-93.938c-24.959-54.411-43.691-136.188-43.691-227.631,0-126.354,45.037-190.357,75.682-233.104,3.681-5.133,9.331-10.249,14.981-10.249,5.65,0,11.299,5.116,14.976,10.249,30.652,42.747,75.689,106.751,75.689,233.104Z"
                 fill="#fff"
-                stroke="#00ED64"
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
@@ -58,15 +60,15 @@ export default function GrowthSvg() {
               <polygon
                 points="522.127 500.556 457.151 500.556 442.516 471.734 536.455 471.734 522.127 500.556"
                 fill="#fff"
-                stroke="#00ED64"
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
               ></polygon>
               <path
                 d="m546.067,78.681h-113.161c13.486-28.266,28.801-49.83,41.598-67.684,3.68-5.129,9.337-10.244,14.986-10.244s11.298,5.115,14.971,10.244c12.805,17.854,28.12,39.418,41.606,67.684Z"
-                fill="#00ED64"
-                stroke="#00ED64"
+                fill={props.color}
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
@@ -77,7 +79,7 @@ export default function GrowthSvg() {
                 x2="457.366"
                 y2="471.734"
                 fill="#fff"
-                stroke="#00ED64"
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
@@ -88,7 +90,7 @@ export default function GrowthSvg() {
                 x2="477.081"
                 y2="500.556"
                 fill="#fff"
-                stroke="#00ED64"
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
@@ -99,7 +101,7 @@ export default function GrowthSvg() {
                 x2="513.368"
                 y2="500.556"
                 fill="#fff"
-                stroke="#00ED64"
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
@@ -110,7 +112,7 @@ export default function GrowthSvg() {
                 x2="501.956"
                 y2="500.556"
                 fill="#fff"
-                stroke="#00ED64"
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
@@ -121,7 +123,7 @@ export default function GrowthSvg() {
                 x2="489.489"
                 y2="415.119"
                 fill="#fff"
-                stroke="#00ED64"
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
@@ -131,8 +133,8 @@ export default function GrowthSvg() {
                   cx="489.489"
                   cy="163.582"
                   r="42.303"
-                  fill="#00ED64"
-                  stroke="#00ED64"
+                  fill={props.color}
+                  stroke={props.color}
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1.5"
@@ -142,7 +144,7 @@ export default function GrowthSvg() {
                   cy="163.582"
                   r="33.698"
                   fill="#fff"
-                  stroke="#00ED64"
+                  stroke={props.color}
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="1.5"
@@ -150,8 +152,8 @@ export default function GrowthSvg() {
               </g>
               <path
                 d="m499.953,464.172c0,49.547-4.686,89.715-10.46,89.715s-10.467-40.168-10.467-89.715c0-29.924,1.707-65.736,4.335-89.406.347-3.122,2.987-5.479,6.129-5.479h0c3.141,0,5.782,2.357,6.129,5.479,2.627,23.67,4.335,59.482,4.335,89.406Z"
-                fill="#00ED64"
-                stroke="#00ED64"
+                fill={props.color}
+                stroke={props.color}
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="1.5"
@@ -214,7 +216,7 @@ export default function GrowthSvg() {
               width="110.341"
               height="28.473"
               fill="#fff"
-              stroke="#00ED64"
+              stroke={props.color}
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.5"
@@ -270,7 +272,7 @@ export default function GrowthSvg() {
             <path
               id="h_6_h"
               d="m125.024,391.604c-1.606,7.722,3.881,10.759,4.165,15.812.294,5.228-4.88,8.969-2.355,16.182,2.598,7.424,8.706,7.284,11.533,11.596,2.827,4.312,2.169,11.74,6.038,15.2,3.814,3.41,11.102,1.937,15.779,4.29,4.52,2.275,7.651,9.044,12.841,10.123s10.759-3.881,15.812-4.165c5.228-.294,11.324,3.963,16.182,2.355,4.928-1.63,7.284-8.706,11.596-11.533,4.312-2.827,9.655.11,15.2-6.038,3.97-4.402,1.937-11.102,4.29-15.779,2.275-4.52,8.429-5.367,10.123-12.841,1.172-5.17-3.881-10.759-4.165-15.812-.294-5.228,4.814-8.962,2.355-16.182-2.341-6.877-8.706-7.284-11.533-11.596-2.827-4.312.653-9.834-6.038-15.2-5.364-4.301-11.102-1.937-15.779-4.29-4.52-2.275-2.749-8.025-12.841-10.123-5.19-1.079-11.651,5.644-16.704,5.928-5.228.294-8.253-6.042-15.29-4.118-7.664,2.095-7.284,8.706-11.596,11.533-4.312,2.827-10.708.352-15.2,6.038-5.429,6.873-1.654,12.553-4.008,17.23-2.275,4.52-8.968,4.478-10.405,11.39Z"
-              fill="#00ED64"
+              fill={props.color}
               stroke="#000"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -298,7 +300,7 @@ export default function GrowthSvg() {
               id="h_6_h-3"
               data-name="h_6_h"
               d="m222.576,394.2s-9.913-3.325-15.78-11.837c0,0-2.525,6.808-13.704,5.706-11.179-1.102-11.835,3.52-14.195,7.525-2.361,4.005-9.907,2.475-9.907,2.475l-11.932-10.6,17.392-23.749,43.942,4.859,1.749,13.808,2.434,11.812Z"
-              fill="#00ED64"
+              fill={props.color}
             ></path>
             <path
               id="h_6_st"
@@ -707,7 +709,7 @@ export default function GrowthSvg() {
               id="b-4"
               data-name="b"
               d="m188.872,467.791s4.85,11.317,13.757,5.16c10.349-7.154.029-19.973.029-19.973.019,2.207-.513,14.019-13.747,14.774l-.039.039Z"
-              fill="#00ED64"
+              fill={props.color}
               stroke="#000"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -717,7 +719,7 @@ export default function GrowthSvg() {
               id="b-5"
               data-name="b"
               d="m175.347,475.401c10.891,3.447,13.525-7.609,13.525-7.609l-.048-.039c-.804.048-1.665.048-2.566.01-14.367-.697-16.894-11.124-17.339-14.929l-.165-.126c-3.282,3.321-4.299,19.256,6.593,22.693Z"
-              fill="#00ED64"
+              fill={props.color}
               stroke="#000"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -1387,7 +1389,7 @@ export default function GrowthSvg() {
               id="l-7"
               data-name="l"
               d="m718.396,589.596l108.955,126.995,58.667-44.14-102.514-123.647,25.97-158.272-71.733-.881-31.358,152.163c-2.614,16.808,1.762,34.214,12.012,47.782Z"
-              fill="#00ED64"
+              fill={props.color}
             ></path>
             <path
               id="l-8"
@@ -1412,7 +1414,7 @@ export default function GrowthSvg() {
               id="l-9"
               data-name="l"
               points="778.381 389.549 775.485 716.477 849.037 716.569 854.796 389.896"
-              fill="#00ED64"
+              fill={props.color}
             ></polyline>
             <line
               id="l-10"
@@ -1439,7 +1441,7 @@ export default function GrowthSvg() {
             <path
               id="h_5_h"
               d="m828.897,201.192c.666-4.763.513-10.306-.828-16.752-4.273-20.545-18.146-34.676-38.725-34.712-20.58-.036-37.106,17.845-37.143,38.83l36.681-1.302,12.123,38.348c.052.317.107.634.173.951,2.456,11.814,14.025,19.4,25.839,16.943s19.4-14.025,16.943-25.839c-1.685-8.106-7.661-14.22-15.062-16.467Z"
-              fill="#00ED64"
+              fill={props.color}
               stroke="#000"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -1467,7 +1469,7 @@ export default function GrowthSvg() {
               id="h_5_h-3"
               data-name="h_5_h"
               d="m761.628,166.154l-8.184,22.36,35.439-1.258,4.004-6.168,2.937,6.008c.033.092,3.782,8.819,14.649,6.762.055-.01.681-.146.681-.146l-4.062-27.262-45.464-.295Z"
-              fill="#00ED64"
+              fill={props.color}
             ></path>
             <path
               id="h_5_h-4"
