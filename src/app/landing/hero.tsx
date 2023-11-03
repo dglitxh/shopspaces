@@ -28,7 +28,7 @@ export default function Hero() {
           <Typography fontSize={"250%"} variant={"h2"}>
             <Typography
               fontSize={"120%"}
-              color={"#00ED64"}
+              color={"primary"}
               variant={"h2"}
               component={"span"}
             >
