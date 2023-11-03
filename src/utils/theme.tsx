@@ -25,7 +25,9 @@ export const useThemeHook = () => {
       createTheme({
         palette: {
           primary: {
-            main: "#00ED64",
+            main: "#8d99ae",
+            light: "#065c4a",
+            dark: "#1565c0",
           },
           mode,
         },
