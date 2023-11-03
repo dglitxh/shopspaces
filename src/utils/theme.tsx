@@ -51,8 +51,8 @@ export const useThemeHook = () => {
                 },
                 // divider: "#5fa8d3",
                 background: {
-                  default: "#0b090a",
-                  paper: "#0a1128",
+                  default: "#0a0908",
+                  paper: "#00171f",
                 },
                 text: {
                   primary: "#fff",
