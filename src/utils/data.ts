@@ -18,14 +18,14 @@ export const aboutData = [
     text: `Craft your unique storefront that reflects your brand identity.
                    With our user-friendly tools, you're just a few clicks away from
                     designing a shop that stands out.`,
-    img: ShopSvg(),
+    img: ShopSvg,
   },
   {
     id: 2,
     title: "Showcase your creations",
     text: `Display your products in all their glory. From handmade crafts to trendy fashion
           let your items shinen and captivate your customers' attention.`,
-    img: IdeaSvg(),
+    img: IdeaSvg,
   },
   {
     id: 3,
@@ -33,14 +33,14 @@ export const aboutData = [
     text: `Break geographical barriers and sell to customers around the world. 
     Our platform's robust features ensure a seamless shopping experience,
      no matter where your customers are.`,
-    img: GrowthSvg(),
+    img: GrowthSvg,
   },
   {
     id: 4,
     title: "Grow your business",
     text: `Our platform is designed to help your businesses thrive.
      With integrated marketing tools, analytics, support, you're set up for greater things.`,
-    img: UpSvg(),
+    img: UpSvg,
   },
 ];
 
