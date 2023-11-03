@@ -29,7 +29,7 @@ const EarningCard = () => {
 
   return (
     <>
-      <Box sx={{ p: 2.25, backgroundColor: theme.palette.secondary.dark }}>
+      <Box sx={{ p: 1 }}>
         <Grid container direction="column">
           <Grid item>
             <Grid container justifyContent="space-between">
