@@ -90,7 +90,12 @@ export default function MainNav(props: any) {
     <div id="nav">
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar color="inherit" enableColorOnDark>
+        <AppBar
+          sx={{
+            backgroundColor: theme.palette.background.default,
+          }}
+          enableColorOnDark
+        >
           <Toolbar variant="regular">
             <IconButton
               onClick={() => toggleDrawer(!isOpen)}
