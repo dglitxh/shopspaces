@@ -25,13 +25,14 @@ import Orders from "./Orders";
 import { ColorModeContext } from "@/utils/theme";
 import { useTheme } from "@mui/material/styles";
 import EarningCard from "./EarningCard";
+import { SITENAME } from "@/utils/data";
 
 function Copyright(props: any) {
   return (
     <Typography variant="body2" color="inherit" align="center" {...props}>
       {"Copyright © "}
       <Link color="inherit" href="#">
-        Shopspaces
+        {SITENAME}
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
