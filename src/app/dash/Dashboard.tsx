@@ -98,7 +98,7 @@ export default function Dashboard() {
   const colorMode = React.useContext(ColorModeContext);
   return (
     <Box sx={{ display: "flex", backgroundColor: "inherit" }}>
-      <AppBar position="absolute" color="inherit" open={open}>
+      <AppBar color="inherit" open={open}>
         <Toolbar
           sx={{
             pr: "24px", // keep right padding when drawer closed
