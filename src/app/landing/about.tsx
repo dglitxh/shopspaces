@@ -1,11 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { Box, Container, Grid, Typography, Button, useTheme } from "@mui/material";
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Button,
+  useTheme,
+} from "@mui/material";
 import { aboutData } from "@/utils/data";
 
 export default function About() {
   const [vpWidth, setVpWidth] = useState(0);
-  const theme = useTheme()
+  const theme = useTheme();
   useEffect(() => {
     setVpWidth(window.innerWidth);
   }, []);
@@ -27,7 +34,7 @@ export default function About() {
     );
   };
   return (
-    <Container maxWidth="lg" sx={{ flexGrow: 1 }}>
+    <Container maxWidth="lg" sx={{ flexGrow: 1, marginTop: 0 }}>
       <Box p={"10%"}>
         {aboutData.map((el) =>
           el.id % 2 != 0 || vpWidth < 800 ? (
