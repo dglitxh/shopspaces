@@ -5,6 +5,7 @@ import UpSvg from "@/assets/up";
 import { create } from "zustand";
 
 export const BACKEND = "http://127.0.0.1:8000";
+export const SITENAME = "shopspaces"
 
 export const useProductStore = create((set) => ({
   items: [],
