@@ -5,14 +5,19 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <Container maxWidth="lg">
+    <Container
+      maxWidth="lg"
+      sx={{
+        margin: 0,
+      }}
+    >
       <Box
         sx={{
           // background: "rgba(53, 224, 87, 0.043)",
           borderBottomLeftRadius: 370,
           borderTopRightRadius: 370,
           fontFamily: "Raleway",
-          height: "112vh",
+          height: "105vh",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
