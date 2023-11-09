@@ -1,7 +1,6 @@
 "use client";
-import { CssBaseline, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import React from "react";
-import { ColorModeContext, useThemeHook } from "@/utils/theme";
 import Hero from "./landing/hero";
 import MainNav from "./landing/nav";
 import MediaCards from "./landing/cards";
