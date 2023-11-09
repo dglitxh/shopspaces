@@ -4,9 +4,10 @@ import React from "react";
 import { ColorModeContext, useThemeHook } from "@/utils/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import Hero from "./landing/hero";
-import About from "./landing/about";
 import MainNav from "./landing/nav";
 import MediaCards from "./landing/cards";
+import Pricing from "./landing/pricing";
+import About from "./landing/about";
 
 export default function Home() {
   const { theme, colorMode } = useThemeHook();
@@ -20,6 +21,7 @@ export default function Home() {
             <Hero />
             <About />
             <MediaCards />
+            <Pricing />
           </main>
         </Container>
       </ThemeProvider>
