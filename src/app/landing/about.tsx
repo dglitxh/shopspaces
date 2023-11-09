@@ -9,6 +9,11 @@ import {
   useTheme,
 } from "@mui/material";
 import { aboutData } from "@/utils/data";
+import dynamic from "next/dynamic";
+
+const RandCol = dynamic(() => import("../components/colHeading"), {
+  ssr: false,
+});
 
 export default function About() {
   const [vpWidth, setVpWidth] = useState(0);
@@ -16,23 +21,7 @@ export default function About() {
   useEffect(() => {
     setVpWidth(window.innerWidth);
   }, []);
-  const RandCol = (props: any) => {
-    let title: string = props.title;
-    let arr = title.split(" ");
-    let r = Math.floor(Math.random() * arr.length);
-    const partA = arr.slice(0, r).join(" ") + " ";
-    const partB = " " + arr.slice(r + 1).join(" ");
-    let colored = arr[r];
-    return (
-      <Typography fontSize={"110%"} variant={"h3"}>
-        {partA}
-        <Typography color={"primary"} component="span" fontSize={"110%"}>
-          {colored}
-        </Typography>
-        {partB}
-      </Typography>
-    );
-  };
+
   return (
     <Container maxWidth="lg" sx={{ flexGrow: 1, marginTop: 0 }}>
       <Box p={"10%"}>
@@ -54,9 +43,10 @@ export default function About() {
                   flexDirection: "column",
                 }}
               >
-                <Typography variant={"h3"}>
+                <Typography variant="h3">
                   <RandCol title={el.title} />
                 </Typography>
+
                 <Typography component={"p"} color="gray">
                   {el.text}
                   <br></br>
@@ -81,7 +71,7 @@ export default function About() {
                   flexDirection: "column",
                 }}
               >
-                <Typography variant={"h3"}>
+                <Typography variant="h3">
                   <RandCol title={el.title} />
                 </Typography>
                 <Typography component={"p"} color="gray">
