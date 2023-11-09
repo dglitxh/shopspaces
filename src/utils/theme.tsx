@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { createTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
@@ -20,6 +20,10 @@ export const useThemeHook = () => {
     }),
     []
   );
+
+  useEffect(() => {
+    setMode(isDark ? "dark" : "light");
+  }, []);
 
   const theme = React.useMemo(
     () =>
