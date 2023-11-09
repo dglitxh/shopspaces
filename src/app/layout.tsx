@@ -3,6 +3,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import ThemeRegistry from "./themeRegistry";
+import { CssBaseline } from "@mui/material";
 
 const raleway = Raleway({ subsets: ["latin"], weight: "300" });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
+      <CssBaseline />
       <body className={raleway.className}>
         {" "}
         <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>
