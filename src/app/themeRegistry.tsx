@@ -54,13 +54,14 @@ export default function ThemeRegistry(props: any) {
   });
 
   return (
-    <CacheProvider value={cache}>
+    
       <ColorModeContext.Provider value={colorMode}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          <CacheProvider value={cache}>
           {children}
+          </CacheProvider>
         </ThemeProvider>
       </ColorModeContext.Provider>
-    </CacheProvider>
   );
 }
