@@ -1,4 +1,3 @@
-// app/ThemeRegistry.tsx
 "use client";
 import createCache from "@emotion/cache";
 import { useServerInsertedHTML } from "next/navigation";
@@ -7,9 +6,6 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ColorModeContext, useThemeHook } from "@/utils/theme";
 import React from "react";
-
-// This implementation is from emotion-js
-// https://github.com/emotion-js/emotion/issues/2928#issuecomment-1319747902
 
 export default function ThemeRegistry(props: any) {
   const { options, children } = props;
