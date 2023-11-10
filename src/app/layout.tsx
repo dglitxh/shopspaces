@@ -32,7 +32,6 @@ export default function RootLayout({
         />
       </head>
       <body className={raleway.className}>
-        <CssBaseline />
         <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>
       </body>
     </html>
