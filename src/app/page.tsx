@@ -6,6 +6,7 @@ import MainNav from "./landing/nav";
 import MediaCards from "./landing/cards";
 import Pricing from "./landing/pricing";
 import About from "./landing/about";
+import Footer from "./landing/footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <About />
         <MediaCards />
         <Pricing />
+        <Footer />
       </main>
     </Container>
   );
