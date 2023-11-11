@@ -1,6 +1,5 @@
 "use client";
 import { Box, Container, Typography, Button, Stack } from "@mui/material";
-import Image from "next/image";
 import React from "react";
 
 export default function Hero() {
