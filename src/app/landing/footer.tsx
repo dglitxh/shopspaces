@@ -1,4 +1,5 @@
 import React from 'react';
+import { SITENAME } from '@/utils/data';
 
 interface FooterLink {
   title: string;
@@ -12,7 +13,7 @@ interface FooterColumn {
 
 const columns: FooterColumn[] = [
   {
-    title: 'SHOPSPACES',
+    title: SITENAME,
     links: [
       {
         title: 'Twitter',
@@ -91,7 +92,7 @@ const Footer: React.FC = () => {
                       place.
                     </p>
                     <p className=" mb-4">
-                      &copy; 2023-2030 SHOPSPACES
+                      &copy; 2023-2030 {SITENAME}
                     </p>
                     <div className="flex space-x-4">
                       <a href="#" className=" hover:text-blue-500">
