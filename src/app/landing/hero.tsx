@@ -1,4 +1,5 @@
 "use client";
+import { SITENAME } from "@/utils/data";
 import { Box, Container, Typography, Button, Stack } from "@mui/material";
 import React from "react";
 
@@ -37,7 +38,7 @@ export default function Hero() {
               component={"span"}
             >
               {" "}
-              Shopspaces.
+              {SITENAME}.
             </Typography>{" "}
             builds your virtual stores in a flash.
           </Typography>
