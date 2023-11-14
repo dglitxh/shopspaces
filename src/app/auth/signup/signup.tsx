@@ -134,7 +134,7 @@ export default function SignUp() {
                 Repeat password
               </label>
               <input
-                type="password2"
+                type="password"
                 name="password2"
                 id="password2"
                 placeholder="••••••••"
