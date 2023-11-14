@@ -45,7 +45,7 @@ export default function SignUp() {
   };
 
   return (
-    <Container component="main" maxWidth="sm">
+    <Container component="main" maxWidth="xs">
       <Box
         sx={{
           marginTop: 8,
@@ -179,7 +179,7 @@ export default function SignUp() {
                 href="#"
                 className="text-blue-700 hover:underline dark:text-blue-500"
               >
-                Create account
+                Login
               </a>
             </div>
           </form>
