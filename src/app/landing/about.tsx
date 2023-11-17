@@ -23,7 +23,7 @@ export default function About() {
   }, []);
 
   return (
-    <Container maxWidth="lg" sx={{ flexGrow: 1, marginTop: 0 }}>
+    <Container id="about" maxWidth="lg" sx={{ flexGrow: 1, marginTop: 0 }}>
       <Box p={"10%"}>
         {aboutData.map((el) =>
           el.id % 2 != 0 || vpWidth < 800 ? (

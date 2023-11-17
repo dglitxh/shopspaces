@@ -16,6 +16,7 @@ const ColHeading = dynamic(() => import("../components/colHeading"), {
 export default function Pricing() {
   return (
     <Container
+      id="pricing"
       maxWidth="lg"
       sx={{
         my: "6%",

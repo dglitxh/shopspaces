@@ -6,6 +6,7 @@ import React from "react";
 export default function Hero() {
   return (
     <Container
+      id="home"
       maxWidth="lg"
       sx={{
         margin: 0,
