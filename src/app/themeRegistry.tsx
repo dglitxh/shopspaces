@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ColorModeContext, useThemeHook } from "@/utils/theme";
 import React from "react";
+import MainNav from "./landing/nav";
 
 export default function ThemeRegistry(props: any) {
   const { options, children } = props;
@@ -54,14 +55,14 @@ export default function ThemeRegistry(props: any) {
   });
 
   return (
-    
-      <ColorModeContext.Provider value={colorMode}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <CacheProvider value={cache}>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <CacheProvider value={cache}>
+          <MainNav />
           {children}
-          </CacheProvider>
-        </ThemeProvider>
-      </ColorModeContext.Provider>
+        </CacheProvider>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
