@@ -15,6 +15,7 @@ import {
   ListItemText,
   Divider,
   useScrollTrigger,
+  Container,
 } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ColorModeContext } from "@/utils/theme";
@@ -89,7 +90,7 @@ export default function MainNav(props: any) {
     setIsOpen(action);
   };
   return (
-    <div id="nav">
+    <Container id="nav" sx={{ mb: "8%" }}>
       <CssBaseline />
       <ElevationScroll {...props}>
         <AppBar
@@ -108,17 +109,15 @@ export default function MainNav(props: any) {
             >
               <Menu />
             </IconButton>
-            
-              <Typography
-                variant="h6"
-                color="inherit"
-                component="div"
-                sx={{ flexGrow: 1 }}
-              >
-                <Link href={"#home"}>
-                {SITENAME}
-                </Link>
-              </Typography>
+
+            <Typography
+              variant="h6"
+              color="inherit"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            >
+              <Link href={"#home"}>{SITENAME}</Link>
+            </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
@@ -142,7 +141,9 @@ export default function MainNav(props: any) {
             >
               <Home />
             </IconButton>
-            <Button color="inherit">Login</Button>
+            <Button color="inherit">
+              <Link href="/auth/signin">Login</Link>
+            </Button>
             <IconButton
               sx={{ ml: 1 }}
               onClick={colorMode.toggleColorMode}
@@ -158,6 +159,6 @@ export default function MainNav(props: any) {
         </AppBar>
       </ElevationScroll>
       <AppDrawer isOpen={isOpen} toggleDrawer={toggleDrawer} menu={pages} />
-    </div>
+    </Container>
   );
 }
