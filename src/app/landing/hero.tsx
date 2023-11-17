@@ -18,7 +18,7 @@ export default function Hero() {
           borderBottomLeftRadius: 370,
           borderTopRightRadius: 370,
           fontFamily: "Raleway",
-          height: "105vh",
+          height: "90vh",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
