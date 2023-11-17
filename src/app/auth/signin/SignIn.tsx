@@ -11,7 +11,6 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { SITENAME } from "@/utils/data";
 
 function Copyright(props: any) {
@@ -32,7 +31,6 @@ function Copyright(props: any) {
   );
 }
 
-
 export default function SignIn() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -44,7 +42,7 @@ export default function SignIn() {
   };
 
   return (
-    <Container component="main" maxWidth="xs" sx={{my: "5%"}}>
+    <Container component="main" maxWidth="xs" sx={{ my: "5%" }}>
       <CssBaseline />
       <Box
         sx={{
@@ -59,9 +57,7 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <form className="space-y-6" action="submit" onSubmit={handleSubmit}>
-            <h5 className="text-xl font-medium">
-              Sign In
-            </h5>
+            <h5 className="text-xl font-medium">Sign In</h5>
             <div>
               <label
                 // for="email"
@@ -119,20 +115,11 @@ export default function SignIn() {
                 Lost Password?
               </a>
             </div>
-            <button
-              type="submit"
-              className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
+            <Button type="submit" variant="contained">
               Login to your account
-            </button>
+            </Button>
             <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-              Not registered?{" "}
-              <a
-                href="#"
-                className="text-blue-700 hover:underline dark:text-blue-500"
-              >
-                Create account
-              </a>
+              Not registered? <Link href="/auth/signup">Sign up</Link>
             </div>
           </form>
         </div>
