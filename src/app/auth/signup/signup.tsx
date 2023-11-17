@@ -45,7 +45,7 @@ export default function SignUp() {
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" sx={{ my: "5%" }}>
       <Box
         sx={{
           marginTop: 8,
@@ -54,18 +54,16 @@ export default function SignUp() {
           alignItems: "center",
         }}
       >
-        <div className="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <div className="w-full p-4 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:border-gray-700">
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
           <form className="space-y-6" action="submit" onSubmit={handleSubmit}>
-            <h5 className="text-xl font-medium text-gray-900 dark:text-white">
-              Sign Up
-            </h5>
+            <h5 className="text-xl font-medium ">Sign Up</h5>
             <div>
               <label
                 // for="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium "
               >
                 Your firstname
               </label>
@@ -73,7 +71,7 @@ export default function SignUp() {
                 type="text"
                 name="firstname"
                 id="firstname"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                className="border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400"
                 placeholder="John"
                 required
               />
@@ -81,7 +79,7 @@ export default function SignUp() {
             <div>
               <label
                 // for="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium "
               >
                 Your lastname
               </label>
@@ -89,7 +87,7 @@ export default function SignUp() {
                 type="text"
                 name="lastname"
                 id="lastname"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                className="border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400"
                 placeholder="Doe"
                 required
               />
@@ -97,7 +95,7 @@ export default function SignUp() {
             <div>
               <label
                 // for="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium "
               >
                 Your email
               </label>
@@ -105,7 +103,7 @@ export default function SignUp() {
                 type="email"
                 name="email"
                 id="email"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                className="border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400"
                 placeholder="name@company.com"
                 required
               />
@@ -113,7 +111,7 @@ export default function SignUp() {
             <div>
               <label
                 // for="password"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium "
               >
                 Your password
               </label>
@@ -122,14 +120,14 @@ export default function SignUp() {
                 name="password"
                 id="password"
                 placeholder="••••••••"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                className="border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400"
                 required
               />
             </div>
             <div>
               <label
                 // for="password"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium "
               >
                 Repeat password
               </label>
@@ -138,7 +136,7 @@ export default function SignUp() {
                 name="password2"
                 id="password2"
                 placeholder="••••••••"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                className="border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-500 dark:placeholder-gray-400"
                 required
               />
             </div>
@@ -149,13 +147,13 @@ export default function SignUp() {
                     id="remember"
                     type="checkbox"
                     value=""
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                    className="w-4 h-4 border border-gray-300 rounded focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
                     required
                   />
                 </div>
                 <label
                   // for="remember"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium  dark:text-gray-300"
                 >
                   Remember me
                 </label>
