@@ -116,7 +116,7 @@ export default function MainNav(props: any) {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              <Link href={"#home"}>{SITENAME}</Link>
+              <Link href={"/"}>{SITENAME}</Link>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
@@ -126,7 +126,7 @@ export default function MainNav(props: any) {
                   color="inherit"
                   sx={{ my: 2, display: "block" }}
                 >
-                  <Link href={`#${page.toLowerCase()}`}>
+                  <Link href={`/#${page.toLowerCase()}`}>
                     <Typography>{page}</Typography>
                   </Link>
                 </Button>
