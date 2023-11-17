@@ -168,7 +168,7 @@ export default function SignUp() {
             <Button type="submit" variant="contained">
               Create your account
             </Button>
-            <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
+            <div className="text-sm font-medium text-gray-800 dark:text-gray-300">
               Have an account? <Link href={"/auth/signin"}>Login</Link>
             </div>
           </form>
