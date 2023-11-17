@@ -84,12 +84,15 @@ const Footer: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             {columns.map((col) => (
-              <div>
+              <div key={col.title + String(Math.random())}>
                 <h2 className="mb-6 font-semibold">{col.title}</h2>
                 <ul className="text-gray-700 dark:text-gray-400 font-medium">
                   {col.links &&
                     col.links.map((lnk) => (
-                      <li className="mb-4">
+                      <li
+                        key={lnk.title + String(Math.random())}
+                        className="mb-4"
+                      >
                         <a href={lnk.href} className="hover:underline">
                           {lnk.title}
                         </a>
