@@ -27,6 +27,8 @@ import {
   Brightness4,
   Brightness7,
 } from "@mui/icons-material";
+import Link from "next/link";
+import { SITENAME } from "@/utils/data";
 
 function AppDrawer(props: any) {
   const { isOpen, toggleDrawer } = props;
@@ -82,7 +84,7 @@ export default function MainNav(props: any) {
   const theme = useTheme();
   const colorMode = React.useContext(ColorModeContext);
   let [isOpen, setIsOpen] = React.useState(false);
-  const pages = ["Home", "About", "Gallery", "Contact"];
+  const pages = ["Home", "About", "Gallery", "Pricing"];
   const toggleDrawer = (action: boolean) => {
     setIsOpen(action);
   };
@@ -106,14 +108,17 @@ export default function MainNav(props: any) {
             >
               <Menu />
             </IconButton>
-            <Typography
-              variant="h6"
-              color="inherit"
-              component="div"
-              sx={{ flexGrow: 1 }}
-            >
-              ShopSpaces.
-            </Typography>
+            
+              <Typography
+                variant="h6"
+                color="inherit"
+                component="div"
+                sx={{ flexGrow: 1 }}
+              >
+                <Link href={"#home"}>
+                {SITENAME}
+                </Link>
+              </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
@@ -122,7 +127,9 @@ export default function MainNav(props: any) {
                   color="inherit"
                   sx={{ my: 2, display: "block" }}
                 >
-                  <Typography>{page}</Typography>
+                  <Link href={`#${page.toLowerCase()}`}>
+                    <Typography>{page}</Typography>
+                  </Link>
                 </Button>
               ))}
             </Box>
