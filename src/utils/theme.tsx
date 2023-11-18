@@ -8,17 +8,25 @@ export const ColorModeContext = React.createContext({
 });
 
 export const useThemeHook = () => {
-  const isDark = useMediaQuery("(prefers-color-scheme: dark)");
+  let isDark = useMediaQuery("(prefers-color-scheme: dark)");
   const userPref = isDark || typeof isDark == undefined ? "dark" : "light";
-  const [mode, setMode] = React.useState<"light" | "dark">(userPref || "dark");
+  const [mode, setMode] = React.useState<"light" | "dark">(userPref);
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+        localStorage.setItem("mode", mode === "light" ? "dark" : "light");
+        setMode(mode === "light" ? "dark" : "light");
       },
     }),
-    []
+    [mode, isDark]
   );
+
+  useEffect(() => {
+    const lhmode = localStorage.getItem("mode");
+    console.log("isdark: ", isDark);
+    if (!lhmode && isDark) setMode("dark");
+    else setMode(lhmode == "dark" ? "dark" : "light");
+  }, []);
 
   const theme = React.useMemo(
     () =>
