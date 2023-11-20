@@ -11,6 +11,7 @@ import MainNav from "./landing/nav";
 export default function ThemeRegistry(props: any) {
   const { options, children } = props;
   const { theme, colorMode } = useThemeHook();
+  const [isMounted, setIsMounted] = React.useState(false);
 
   const [{ cache, flush }] = React.useState(() => {
     const cache = createCache(options);
@@ -54,13 +55,18 @@ export default function ThemeRegistry(props: any) {
     );
   });
 
+  React.useEffect(()=> {
+    setIsMounted(true)
+  }, [])
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <CacheProvider value={cache}>
-          <MainNav />
-          {children}
+          <div style={{visibility: isMounted? "visible" : "hidden"}}>
+            <MainNav/>
+            {children}
+          </div>
         </CacheProvider>
       </ThemeProvider>
     </ColorModeContext.Provider>
