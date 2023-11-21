@@ -4,12 +4,13 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import ThemeRegistry from "./themeRegistry";
 import { CssBaseline } from "@mui/material";
+import { SITENAME } from "@/utils/data";
 
 const raleway = Raleway({ subsets: ["latin"], weight: "300" });
 
 export const metadata: Metadata = {
-  title: "ShopSpaces",
-  description: "Online marketplace.",
+  title: SITENAME,
+  description: "Subscription based online commerce platform.",
 };
 
 export default function RootLayout({
