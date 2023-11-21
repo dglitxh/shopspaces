@@ -28,8 +28,16 @@ export default function Pricing() {
         <ColHeading title={"Great value for money"} size={"115%"} />
       </Typography>
       <Grid container spacing={8}>
-        {pricingCats.map((pkg: object) => (
-          <Grid key={String(Math.random())} item xs={12} sm={12} md={4} lg={4} xl={4}>
+        {pricingCats && pricingCats.map((pkg: object) => (
+          <Grid
+            key={String(Math.random()+Math.random())}
+            item
+            xs={12}
+            sm={12}
+            md={4}
+            lg={4}
+            xl={4}
+          >
             <PricingCard pkg={pkg} />
           </Grid>
         ))}
@@ -67,7 +75,10 @@ function PricingCard(props: any) {
       </div>
       <ul role="list" className="space-y-5 my-7">
         {pkg.features.map((ft: string) => (
-          <li className="flex space-x-3 items-center">
+          <li
+            key={String(Math.random()) + ft}
+            className="flex space-x-3 items-center"
+          >
             <svg
               className="flex-shrink-0 w-4 h-4 text-blue-600"
               aria-hidden="true"
