@@ -8,17 +8,14 @@ import {
   CardContent,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { BACKEND } from "@/utils/data";
+import { BACKEND, productsData } from "@/utils/data";
 import { httpReq } from "@/utils/helpers";
-import { useProductStore } from "@/utils/data";
 
 export default function Catalog() {
-  let [products, setProducts] = useState<Array<string>>([]);
+  let [products, setProducts] = useState<Array<string | object>>(productsData);
   useEffect(() => {
-    console.log("ahnnn ei");
     const getProds = async () => {
       const prods = await httpReq("GET", `${BACKEND}/stores/1/products`, "");
-      console.log(prods, "prosdffgh");
       setProducts(prods);
     };
     getProds();
@@ -29,7 +26,7 @@ export default function Catalog() {
   return (
     <Container>
       <Typography> My Catalog</Typography>
-      {products.length > 1 &&
+      {products &&
         products.map((el: any) => (
           <Card sx={{ maxWidth: 345, margin: 1 }} key={el.id}>
             {/* <CardMedia
