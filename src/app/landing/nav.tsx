@@ -12,6 +12,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemIcon,
+  Badge,
   ListItemText,
   Divider,
   useScrollTrigger,
@@ -24,7 +25,7 @@ import {
   Menu,
   Home,
   Phone,
-  Shop,
+  ShoppingCart,
   Brightness4,
   Brightness7,
 } from "@mui/icons-material";
@@ -132,17 +133,9 @@ export default function MainNav(props: any) {
                 </Button>
               ))}
             </Box>
-            <IconButton
-              edge="end"
-              color="inherit"
-              aria-label="menu"
-              sx={{ ml: 2 }}
-              focusRipple={true}
-            >
-              <Home />
-            </IconButton>
+
             <Button color="inherit">
-              <Link href="/auth/signin">Login</Link>
+              <Link href="/auth/signin">Get started</Link>
             </Button>
             <IconButton
               sx={{ ml: 1 }}
@@ -154,6 +147,17 @@ export default function MainNav(props: any) {
               ) : (
                 <Brightness4 />
               )}
+            </IconButton>
+            <IconButton
+              edge="end"
+              color="inherit"
+              aria-label="menu"
+              sx={{ ml: 2 }}
+              focusRipple={true}
+            >
+              <Badge badgeContent={4} color="error">
+                <ShoppingCart />
+              </Badge>
             </IconButton>
           </Toolbar>
         </AppBar>
