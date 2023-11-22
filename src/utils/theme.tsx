@@ -1,30 +1,30 @@
 "use client";
 import React, { useEffect } from "react";
 import { createTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 export const ColorModeContext = React.createContext({
   toggleColorMode: () => {},
 });
 
 export const useThemeHook = () => {
-  const isDark = useMediaQuery("(prefers-color-scheme: dark)");
+  const isDark = false;
   const userPref = isDark || typeof isDark == undefined ? "dark" : "light";
   const [mode, setMode] = React.useState<"light" | "dark">(userPref);
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
-        localStorage.setItem("mode", mode === "light" ? "dark" : "light");
-        setMode(mode === "light" ? "dark" : "light");
+        const chMode = mode === "light" ? "dark" : "light";
+        localStorage.setItem("mode", chMode);
+        setMode(chMode);
       },
     }),
-    [mode, isDark]
+    [mode]
   );
 
   useEffect(() => {
     const lhmode = localStorage.getItem("mode");
-    console.log("isdark: ", isDark);
-    if (!lhmode && isDark) setMode("dark");
+    const w = window.matchMedia("(prefers-color-scheme: dark)");
+    if (!lhmode && w.matches) setMode("dark");
     else setMode(lhmode == "dark" ? "dark" : "light");
   }, []);
 
