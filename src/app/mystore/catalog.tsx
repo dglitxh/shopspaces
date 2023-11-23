@@ -16,7 +16,7 @@ export default function Catalog() {
   useEffect(() => {
     const getProds = async () => {
       const prods = await httpReq("GET", `${BACKEND}/stores/1/products`, "");
-      setProducts(prods);
+      prods && setProducts(prods);
     };
     getProds();
   }, []);
