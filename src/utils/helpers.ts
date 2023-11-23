@@ -21,6 +21,6 @@ export const httpReq = async (type: string, url: string, data: string) => {
     return res;
   } catch (e) {
     console.log(e);
-    return e;
+    return null;
   }
 };
