@@ -60,7 +60,7 @@ export default function SignIn() {
             <h5 className="text-xl font-medium">Sign In</h5>
             <div>
               <label
-                // for="email"
+                // htmlFor="email"
                 className="block mb-2 text-sm font-medium"
               >
                 Your email
@@ -76,7 +76,7 @@ export default function SignIn() {
             </div>
             <div>
               <label
-                // for="password"
+                htmlFor="password"
                 className="block mb-2 text-sm font-medium"
               >
                 Your password
@@ -102,7 +102,7 @@ export default function SignIn() {
                   />
                 </div>
                 <label
-                  // for="remember"
+                  htmlFor="remember"
                   className="ml-2 text-sm font-medium dark:text-gray-300"
                 >
                   Remember me

@@ -62,7 +62,7 @@ export default function SignUp() {
             <h5 className="text-xl font-medium ">Sign Up</h5>
             <div>
               <label
-                // for="email"
+                htmlFor="email"
                 className="block mb-2 text-sm font-medium "
               >
                 Your firstname
@@ -78,7 +78,7 @@ export default function SignUp() {
             </div>
             <div>
               <label
-                // for="email"
+                htmlFor="email"
                 className="block mb-2 text-sm font-medium "
               >
                 Your lastname
@@ -94,7 +94,7 @@ export default function SignUp() {
             </div>
             <div>
               <label
-                // for="email"
+                htmlFor="email"
                 className="block mb-2 text-sm font-medium "
               >
                 Your email
@@ -110,7 +110,7 @@ export default function SignUp() {
             </div>
             <div>
               <label
-                // for="password"
+                htmlFor="password"
                 className="block mb-2 text-sm font-medium "
               >
                 Your password
@@ -126,7 +126,7 @@ export default function SignUp() {
             </div>
             <div>
               <label
-                // for="password"
+                htmlFor="password"
                 className="block mb-2 text-sm font-medium "
               >
                 Repeat password
@@ -152,7 +152,7 @@ export default function SignUp() {
                   />
                 </div>
                 <label
-                  // for="remember"
+                  htmlFor="remember"
                   className="ml-2 text-sm font-medium  dark:text-gray-300"
                 >
                   Remember me
