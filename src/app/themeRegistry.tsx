@@ -55,16 +55,15 @@ export default function ThemeRegistry(props: any) {
     );
   });
 
-  React.useEffect(()=> {
-    setIsMounted(true)
-  }, [])
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <CacheProvider value={cache}>
-          <div style={{visibility: isMounted? "visible" : "hidden"}}>
-            <MainNav/>
+          <div style={{ visibility: isMounted ? "visible" : "hidden" }}>
             {children}
           </div>
         </CacheProvider>
