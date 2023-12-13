@@ -9,41 +9,48 @@ import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import Orders from './Orders';
 
-export const mainListItems = (
-  <React.Fragment>
-    <ListItemButton>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItemButton>
-  </React.Fragment>
-);
+export const MainListItems  = (props: any) => {
+   
+  const {currView, setCurrView} = props
+
+ return (
+   <React.Fragment>
+     <ListItemButton onClick={() => setCurrView(0)}>
+       <ListItemIcon>
+         <DashboardIcon />
+       </ListItemIcon>
+       <ListItemText primary="Dashboard" />
+     </ListItemButton>
+     <ListItemButton onClick={() => setCurrView(1)}>
+       <ListItemIcon>
+         <ShoppingCartIcon />
+       </ListItemIcon>
+       <ListItemText primary="Orders" />
+     </ListItemButton>
+     <ListItemButton onClick={() => setCurrView(2)}>
+       <ListItemIcon>
+         <PeopleIcon />
+       </ListItemIcon>
+       <ListItemText primary="Customers" />
+     </ListItemButton>
+     <ListItemButton onClick={() => setCurrView(3)}>
+       <ListItemIcon>
+         <BarChartIcon />
+       </ListItemIcon>
+       <ListItemText primary="Reports" />
+     </ListItemButton>
+     <ListItemButton onClick={() => setCurrView(4)}>
+       <ListItemIcon>
+         <LayersIcon />
+       </ListItemIcon>
+       <ListItemText primary="Integrations" />
+     </ListItemButton>
+   </React.Fragment>
+ );
+}
+
 
 export const secondaryListItems = (
   <React.Fragment>
