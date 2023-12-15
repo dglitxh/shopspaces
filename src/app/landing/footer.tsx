@@ -14,19 +14,6 @@ interface FooterColumn {
 
 const columns: FooterColumn[] = [
   {
-    title: "Social",
-    links: [
-      {
-        title: "Twitter",
-        href: "#!",
-      },
-      {
-        title: "Instagram",
-        href: "#!",
-      },
-    ],
-  },
-  {
     title: "Customer Service",
     links: [
       {
@@ -65,6 +52,19 @@ const columns: FooterColumn[] = [
       {
         title: "Terms of Service",
         href: "#",
+      },
+    ],
+  },
+  {
+    title: "Social",
+    links: [
+      {
+        title: "Twitter",
+        href: "#!",
+      },
+      {
+        title: "Instagram",
+        href: "#!",
       },
     ],
   },
