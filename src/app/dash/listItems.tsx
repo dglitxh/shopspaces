@@ -13,7 +13,7 @@ import Orders from './Orders';
 
 export const MainListItems  = (props: any) => {
    
-  const {currView, setCurrView} = props
+  const {setCurrView} = props
 
  return (
    <React.Fragment>
