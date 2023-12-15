@@ -12,6 +12,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { BACKEND, productsData } from "@/utils/data";
 import { httpReq } from "@/utils/helpers";
+import Image from "next/image";
 
 export default function Catalog() {
   let [products, setProducts] = useState<Array<string | object>>(productsData);
@@ -41,7 +42,7 @@ export default function Catalog() {
             >
               <Paper key={el.name + String(Math.random())}>
                 <a href="#">
-                  <img
+                  <Image
                     className="p-8 rounded-t-lg"
                     src="/docs/images/products/apple-watch.png"
                     alt="product image"

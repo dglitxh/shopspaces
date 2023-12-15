@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function CartTable() {
@@ -26,7 +27,7 @@ export default function CartTable() {
         <tbody>
           <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
             <td className="p-4">
-              <img
+              <Image
                 src="/docs/images/products/apple-watch.png"
                 className="w-16 md:w-32 max-w-full max-h-full"
                 alt="Apple Watch"
