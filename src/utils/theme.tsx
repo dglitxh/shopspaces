@@ -71,7 +71,7 @@ export const useThemeHook = () => {
           fontFamily: "Raleway",
         },
       }),
-    [mode, isDark]
+    [mode]
   );
   return {
     colorMode,
