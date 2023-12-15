@@ -93,7 +93,7 @@ const Drawer = styled(MuiDrawer, {
 export default function Dashboard() {
   const [open, setOpen] = React.useState(true);
   const [currView, setCurrView] = React.useState(0);
-  const views = [<MainView />, <Orders />, <></>, <></>, <></>];
+  const views = [<MainView key={Math.random()} />, <Orders key={Math.random()}/>, <></>, <></>, <></>];
   const toggleDrawer = () => {
     setOpen(!open);
   };
