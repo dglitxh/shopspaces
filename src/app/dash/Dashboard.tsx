@@ -26,8 +26,6 @@ import { ColorModeContext } from "@/utils/theme";
 import { useTheme } from "@mui/material/styles";
 import EarningCard from "./EarningCard";
 import { SITENAME } from "@/utils/data";
-import MainNav from "../landing/nav";
-import { JsxElement } from "typescript";
 
 function Copyright(props: any) {
   return (
@@ -95,7 +93,7 @@ const Drawer = styled(MuiDrawer, {
 export default function Dashboard() {
   const [open, setOpen] = React.useState(true);
   const [currView, setCurrView] = React.useState(0);
-  const views = [MainView(), <Orders/>, <></>, <></>, <></>];
+  const views = [<MainView />, <Orders />, <></>, <></>, <></>];
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -173,7 +171,7 @@ export default function Dashboard() {
         }}
       >
         <Toolbar />
-        {views[currView]}
+        <Box key={currView}>{views[currView]}</Box>
       </Box>
     </Box>
   );
