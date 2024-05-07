@@ -4,6 +4,7 @@ import IdeaSvg from "@/assets/idea";
 import UpSvg from "@/assets/up";
 import { create } from "zustand";
 
+// this is temporary (would be changed to env var in prod)
 export const BACKEND = "https://spaceru.onrender.com";
 export const SITENAME = "Shopspaces";
 
