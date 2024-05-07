@@ -6,7 +6,8 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Title from "./Title";
-import { Paper } from "@mui/material";
+import { Paper, Box } from "@mui/material";
+import Paginator from "./Paginator";
 
 // Generate Order Data
 function createData(
@@ -67,7 +68,7 @@ function preventDefault(event: React.MouseEvent) {
   event.preventDefault();
 }
 
-export default function Orders() {
+export default function Orders(props: any) {
   return (
     <React.Fragment>
       <Paper sx={{ m: 2, p: 2, display: "flex", flexDirection: "column" }}>
@@ -77,9 +78,7 @@ export default function Orders() {
             <TableRow>
               <TableCell>Date</TableCell>
               <TableCell>Name</TableCell>
-              <TableCell sx={{ display: { xs: "none", md: "flex" } }}>
-                Ship To
-              </TableCell>
+              <TableCell>Ship To</TableCell>
               <TableCell sx={{ display: { xs: "none", md: "flex" } }}>
                 Payment Method
               </TableCell>
@@ -91,9 +90,7 @@ export default function Orders() {
               <TableRow key={row.id}>
                 <TableCell>{row.date}</TableCell>
                 <TableCell>{row.name}</TableCell>
-                <TableCell sx={{ display: { xs: "none", md: "flex" } }}>
-                  {row.shipTo}
-                </TableCell>
+                <TableCell>{row.shipTo}</TableCell>
                 <TableCell sx={{ display: { xs: "none", md: "flex" } }}>
                   {row.paymentMethod}
                 </TableCell>
@@ -102,9 +99,20 @@ export default function Orders() {
             ))}
           </TableBody>
         </Table>
-        <Link color="primary" href="#" onClick={preventDefault} sx={{ mt: 3 }}>
-          See more orders
-        </Link>
+        {props.mainPage ? (
+          <Link
+            color="primary"
+            href="#"
+            onClick={preventDefault}
+            sx={{ mt: 3 }}
+          >
+            See more
+          </Link>
+        ) : (
+          <Box className="flex-end" sx={{ my: 3 }}>
+            <Paginator perPage={6} />
+          </Box>
+        )}
       </Paper>
     </React.Fragment>
   );
