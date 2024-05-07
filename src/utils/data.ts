@@ -4,7 +4,7 @@ import IdeaSvg from "@/assets/idea";
 import UpSvg from "@/assets/up";
 import { create } from "zustand";
 
-export const BACKEND = "http://127.0.0.1:8000";
+export const BACKEND = "https://spaceru.onrender.com";
 export const SITENAME = "Shopspaces";
 
 export const useProductStore = create((set) => ({
