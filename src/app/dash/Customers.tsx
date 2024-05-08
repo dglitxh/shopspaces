@@ -96,7 +96,7 @@ export default function CustomersTb() {
 
   return (
     <Box>
-      <Paper sx={{ m: 4, overflow: "hidden" }}>
+      <Paper sx={{ m: 2, overflow: "scroll" }}>
         <Typography variant="h5" sx={{ m: 2 }}>
           Customers
         </Typography>
