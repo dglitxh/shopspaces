@@ -26,6 +26,7 @@ import { ColorModeContext } from "@/utils/theme";
 import { useTheme } from "@mui/material/styles";
 import EarningCard from "./EarningCard";
 import { SITENAME } from "@/utils/data";
+import CustomersTb from "./Customers";
 
 function Copyright(props: any) {
   return (
@@ -96,7 +97,7 @@ export default function Dashboard() {
   const views = [
     <MainView key={Math.random()} />,
     <Orders key={Math.random()} />,
-    <></>,
+    <CustomersTb key={Math.random()} />,
     <></>,
     <></>,
   ];
@@ -227,9 +228,7 @@ function MainView() {
         </Grid>
         {/* Recent Orders */}
         <Grid item xs={12}>
-          
-            <Orders mainPage={true}/>
-  
+          <Orders mainPage={true} />
         </Grid>
       </Grid>
       <Copyright sx={{ pt: 4 }} />
